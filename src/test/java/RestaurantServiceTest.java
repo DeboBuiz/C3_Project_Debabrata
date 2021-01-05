@@ -42,7 +42,7 @@ class RestaurantServiceTest {
     //>>>>>>>>> TDD >>>>>>>>>>>>>>>>>>>>>>>
     //Test case for implementing the Summation of menu item prices feature.
     @Test
-    public void when_a_list_of_menu_items_are_passed_by_name_the_getTotalPriceOfSelectedItems_should_return_the_total_price(){
+    public void when_a_list_of_menu_items_are_passed_by_name_the_getTotalPriceOfSelectedItems_should_return_the_total_price() throws restaurantNotFoundException, itemNotFoundException {
         List<String> items = new ArrayList<String>();
         items.add("Sweet corn soup");
         items.add("Vegetable lasagne");

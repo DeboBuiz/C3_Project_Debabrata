@@ -39,4 +39,16 @@ public class RestaurantService {
     public List<Restaurant> getRestaurants() {
         return restaurants;
     }
+
+    public int getTotalPriceOfSelectedItems(List<String> items, String restaurantName) throws restaurantNotFoundException, itemNotFoundException{
+        int totalPrice = 0;
+        Restaurant restaurant = findRestaurantByName(restaurantName);
+
+        for(String name: items){
+            Item item = restaurant.findItemByName(name);
+            totalPrice = totalPrice + item.getPrice();
+        }
+
+        return totalPrice;
+    }
 }

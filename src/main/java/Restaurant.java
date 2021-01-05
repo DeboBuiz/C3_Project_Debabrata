@@ -31,7 +31,7 @@ public class Restaurant {
         return menu;
     }
 
-    private Item findItemByName(String itemName) throws itemNotFoundException{
+    public Item findItemByName(String itemName) throws itemNotFoundException{
         Item searchItem = null;
         for(Item item: menu) {
             if(item.getName().equals(itemName))
