@@ -49,7 +49,7 @@ class RestaurantServiceTest {
 
         String restaurantName = "Amelie's cafe";
 
-        int totalPrice = getTotalPriceOfSelectedItems(items, restaurantName);
+        int totalPrice = service.getTotalPriceOfSelectedItems(items, restaurantName);
         assertEquals(388, totalPrice);
 
     }
